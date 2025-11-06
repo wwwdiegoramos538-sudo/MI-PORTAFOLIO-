@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Estudiantil</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Animaciones de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideInFromRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            70% { transform: scale(0.9); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Estilos de secciones */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            animation: slideInFromTop 1s ease-out;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+            animation: bounceIn 1.2s ease-out;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+        
+        section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .section-left {
+            animation: slideInFromLeft 1s ease-out;
+        }
+        
+        .section-right {
+            animation: slideInFromRight 1s ease-out;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .info-card h3 {
+            margin-bottom: 10px;
+            color: #fdbb2d;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 2s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="fotoperfil.jpg" alt="Foto de perfil" class="profile-img">
+            <h1>DIEGO ANTONIO RAMOS RODRIGUEZ</h1>
+            <p>Estudiante de [DESARROLLO DE SOFTWARE]</p>
+        </header>
+        
+        <section class="section-left">
+            <h2>Datos Personales</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Email:</strong> www.diegoramos538@gmail.com</p>
+                    <p><strong>Teléfono:</strong> +503 7997 9968</p>
+                    <p><strong>Ubicación:</strong> EL SALVADOR, SOYA</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Redes Sociales</h3>
+                    <p><strong>GitHub:</strong> github.com/diegoramos</p>
+                    <p><strong>LinkedIn:</strong> linkedin.com/in/rmo2sdiex</p>
+                    <p><strong>Portafolio:</strong> mi-portafolio.com.gob.sv</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-right">
+            <h2>Datos Académicos</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Institución Educativa</h3>
+                    <p><strong>Nombre:</strong>INSAL</p>
+                    <p><strong>Carrera:</strong>SOFTWARE DEVELOPMENT</p>
+                    <p><strong>Semestre/Año:</strong> [3AÑO SI DIOSITO LO PERMITE]</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Logros Académicos</h3>
+                    <p><strong>Promedio:</strong>8.1</p>
+                    <p><strong>Reconocimientos:</strong>1</p>
+                    <p><strong>Proyectos Destacados:</strong>2</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-left">
+            <h2>Habilidades Técnicas</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Lenguajes de Programación</h3>
+                    <p>JavaScript, Python, Java, C++, etc.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Technologías Web</h3>
+                    <p>HTML5, CSS3, React, Node.js, Express, etc.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Bases de Datos</h3>
+                    <p>MySQL, MongoDB, PostgreSQL, etc.</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Herramientas</h3>
+                    <p>Git, Docker, VS Code, Figma, etc.</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 RAMOS - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        // Efectos de scroll para las animaciones
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Pausar animaciones inicialmente
+            const animatedElements = document.querySelectorAll('section, header, footer');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
